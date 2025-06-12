@@ -1,0 +1,39 @@
+body{
+    margin:auto;
+    text-align:center;
+    line-height:24px;
+    background-color: #444;
+    color:white;
+}
+p{
+    max-width:45%;
+    margin:auto;
+    line-height:24px;
+}
+ol{
+    display: inline-block;
+}
+button{
+    max-width:20%;
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    overflow-wrap: anywhere;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius:8px;
+}
+button:hover{
+    background-color:#777;
+}
+button:active{
+    background-color:#333;
+}
+.hidden-text{
+    color:#444;
+    cursor:default;
+}

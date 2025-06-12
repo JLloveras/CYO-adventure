@@ -47,11 +47,11 @@ buttonLeft.addEventListener("click", function() {
         title[0].innerHTML= "CYOA: Darkness";
         background.style.backgroundColor="#111"
         pageName[0].innerHTML= "Yet Darker"
-        paragraphs[0].innerHTML= "End of Demo. Refresh the page for the next person, please.";
+        paragraphs[0].innerHTML= "Traveling yet further down this hallway, it seems to get even darker. It's all pitch-black. We can't even tell if our eyes are open or closed at this point. Even our footsteps seem to sound unsure, as if the darkness itself was silencing the sound of our feet. Dark. Darker. Yet darker.";
         paragraphs[1].innerHTML= "";
-        hiddenText[0].innerHTML="Steel your resolve. Darkness is as common as the light.";
+        hiddenText[0].innerHTML="Focus on the truths. The only thing hiding in the dark is your own imagination.";
         hiddenText[0].style.color="#111"
-        buttonLeft.innerHTML="Walk further into the dark.";
+        buttonLeft.innerHTML="Proceed.";
     };
 });
 buttonRight.addEventListener("click", function() {

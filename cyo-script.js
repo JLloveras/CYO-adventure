@@ -1,7 +1,7 @@
 //This variable measures the adventure's "Page", determining what choices can be made.
 let page=1;
-//This variable measures if the player has the "Broken Flashlight" tool.
-let flashlight=0;
+//This variable measures the Player's tools. 1=Flashlight(Empty) 2=Battery, etc.
+let tools=0;
 let title=document.getElementsByTagName("title");
 let background=document.querySelector("body");
 let pageName=document.getElementsByTagName("h1");
@@ -105,7 +105,7 @@ buttonRight.addEventListener("click", function() {
         buttonRight.style.display="inline";
         buttonRight.innerHTML="Push further into the light.";
     }else if(page==21){
-       page=15;
+       page=22;
         title[0].innerHTML= "CYOA: Brightness";
         background.style.backgroundColor="#AAA"
         pageName[0].innerHTML= "Lighter"
@@ -117,18 +117,20 @@ buttonRight.addEventListener("click", function() {
         hiddenText[0].innerHTML="With light comes heat, but resolve is always tested when closer to the goal.";
         hiddenText[0].style.color="#AAA"
         buttonRight.innerHTML="Continue on our path.";
-    }else if(page==15){
-       page=13;
+    }else if(page==22){
+       page=15;
         title[0].innerHTML= "CYOA: Brightness";
         background.style.backgroundColor="#FFF"
         pageName[0].innerHTML= "Yet Lighter."
         pageName[0].style.color="#000";
         paragraphs[0].style.color="#000";
         paragraphs[1].style.color="#000";
-        paragraphs[0].innerHTML= "Further and further into the light we walk, our eyes beginning to hurt from the sheer brightness of the hallway. The walls themselves seem to exude light, and the air itself begins to heat up from the amount of heat the light produces.";
-        paragraphs[1].innerHTML= "";
-        hiddenText[0].innerHTML="With light comes heat, but resolve is always tested when closer to the goal.";
+        paragraphs[0].innerHTML= "The heat is beginning to be unbearable, as our eyes seem to always be open, our retinas burning from the act of processing all this light. A roar is heard from something close by.";
+        paragraphs[1].innerHTML= "A creature, fur as white as the light around us, appears in front of us. What should we do?";
+        hiddenText[0].innerHTML="The creature is too large to fight head-on. Sneak around it.";
         hiddenText[0].style.color="#FFF"
-        buttonRight.innerHTML="Continue on our path.";
+        buttonLeft.style.display="inline";
+        buttonLeft.innerHTML="Attempt to sneak past it.";
+        buttonRight.innerHTML="Stand our ground and fight.";
     };
 });

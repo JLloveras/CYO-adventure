@@ -13,6 +13,14 @@ p{
 ol{
     display: inline-block;
 }
+a:link, a:visited{
+    text-decoration:none;
+    color:white;
+}
+.return{
+    margin:10px;
+    width:33%;
+}
 button{
     max-width:20%;
     background-color: #555;

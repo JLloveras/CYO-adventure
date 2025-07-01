@@ -1,6 +1,6 @@
 //This variable measures the adventure's "Page", determining what choices can be made.
 let page=1;
-//This variable measures the Player's tools. 1=Flashlight(Empty) 2=Battery, etc.
+//This variable measures the Player's tools. 1=Flashlight(Empty) 2=Battery, 3 3=Both
 let tools=0;
 let title=document.getElementsByTagName("title");
 let background=document.querySelector("body");
@@ -121,7 +121,7 @@ buttonRight.addEventListener("click", function() {
        page=15;
         title[0].innerHTML= "CYOA: Brightness";
         background.style.backgroundColor="#FFF"
-        pageName[0].innerHTML= "Yet Lighter."
+        pageName[0].innerHTML= "Yet Lighter"
         pageName[0].style.color="#000";
         paragraphs[0].style.color="#000";
         paragraphs[1].style.color="#000";
@@ -132,5 +132,49 @@ buttonRight.addEventListener("click", function() {
         buttonLeft.style.display="inline";
         buttonLeft.innerHTML="Attempt to sneak past it.";
         buttonRight.innerHTML="Stand our ground and fight.";
+    }else if(page==15){
+        page=18;
+        title[0].innerHTML= "CYOA: Battle of Light";
+        background.style.backgroundColor="#FFF"
+        pageName[0].innerHTML= "Battle"
+        pageName[0].style.color="#000";
+        paragraphs[0].style.color="#000";
+        paragraphs[1].style.color="#000";
+        paragraphs[0].innerHTML= "Beginning our battle against this creature of light, it is becoming increasingly obvious that we are outmatched by this beast in terms of raw power.";
+        paragraphs[1].innerHTML= "We should think of a new strategy";
+        hiddenText[0].innerHTML="Death is all but assured at this point. Give up. The key is beyond the beast.";
+        hiddenText[0].style.color="#FFF"
+        buttonLeft.style.display="inline";
+        buttonLeft.innerHTML="Fight fair and overcome.";
+        buttonRight.innerHTML="Fight dirty and strike where it's weak.";
+    }else if(page==18){
+        page=9;
+        title[0].innerHTML= "CYOA: Battle of Light";
+        background.style.backgroundColor="#FFF"
+        pageName[0].innerHTML= "A Losing Battle"
+        pageName[0].style.color="#000";
+        paragraphs[0].style.color="#000";
+        paragraphs[1].style.color="#000";
+        paragraphs[0].innerHTML= "We begin to fight as dirty as we can. We strike where it's weak, dash around it and continue to attack, but the wall of pure power that is this monster of a creature seems unaffected.";
+        paragraphs[1].innerHTML= "There must be SOME way to beat it.";
+        hiddenText[0].innerHTML="Death is all but assured at this point. Give up. The key is beyond the beast.";
+        hiddenText[0].style.color="#FFF"
+        buttonLeft.style.display="inline";
+        buttonLeft.innerHTML="Fight harder. We can win this. Use all we have to defeat the beast.";
+        buttonRight.innerHTML="Run away from this creature.";
+    }else if(page==9){
+        page=14;
+        title[0].innerHTML= "CYOA: Failure";
+        background.style.backgroundColor="#CCC"
+        pageName[0].innerHTML= "Death"
+        pageName[0].style.color="#000";
+        paragraphs[0].style.color="#000";
+        paragraphs[1].style.color="#000";
+        paragraphs[0].innerHTML= "Attempting to fight this demon was a horrible idea. We begin to sprint as fast as we can to get away, but it begins to give chase.";
+        paragraphs[1].innerHTML= "Failure. Press Refresh to play again.";
+        hiddenText[0].innerHTML="Next time, try and sneak past, fool.";
+        hiddenText[0].style.color="#CCC"
+        buttonLeft.style.display="none";
+        buttonRight.style.display="none";
     };
 });
